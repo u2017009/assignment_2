@@ -9,7 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2 # Check out your repository
-      working-directory: app2 
     - run: yarn # Install dependencies
+      working-directory: app2 
     - run: yarn test --coverage # Run test
+      working-directory: app2 
     - run: bash <(curl -s https://codecov.io/bash) # Upload to Codecov
+      working-directory: app2 
